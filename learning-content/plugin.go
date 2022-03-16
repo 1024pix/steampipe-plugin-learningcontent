@@ -21,6 +21,7 @@ func Plugin(ctx context.Context) *plugin.Plugin {
 			"skills_tutorials":               skillsTutorialsTable(),
 			"skills_learning_more_tutorials": skillsLearningMoreTutorialsTable(),
 			"tutorials":                      tutorialsTable(),
+			"tube":                           tubeTable(),
 		},
 	}
 }
