@@ -3,10 +3,9 @@ package learning_content
 import (
 	"context"
 
-	learning_content_client "github.com/1024pix/go-learning-content-client"
+	client "github.com/1024pix/steampipe-plugin-learning-content/learning-content/client"
 	"github.com/turbot/steampipe-plugin-sdk/v2/grpc/proto"
 	"github.com/turbot/steampipe-plugin-sdk/v2/plugin"
-	"github.com/turbot/steampipe-plugin-sdk/v2/plugin/transform"
 )
 
 func skillsTable() *plugin.Table {
@@ -15,7 +14,6 @@ func skillsTable() *plugin.Table {
 		List: &plugin.ListConfig{
 			Hydrate: hydrateSkillsList,
 		},
-		DefaultTransform: transform.FromJSONTag(),
 		Columns: []*plugin.Column{
 			{Name: "id", Type: proto.ColumnType_STRING},
 			{Name: "name", Type: proto.ColumnType_STRING},
@@ -40,9 +38,9 @@ func hydrateSkillsList(ctx context.Context, d *plugin.QueryData, h *plugin.Hydra
 
 	config := getConfig(d.Connection)
 
-	c := learning_content_client.New(
-		learning_content_client.WithApiURL(*config.ApiURL),
-		learning_content_client.WithApiKey(*config.ApiKey),
+	c := client.New(
+		client.WithApiURL(*config.ApiURL),
+		client.WithApiKey(*config.ApiKey),
 	)
 
 	r, err := c.GetLatestRelease()

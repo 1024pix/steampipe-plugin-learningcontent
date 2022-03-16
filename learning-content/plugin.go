@@ -16,7 +16,9 @@ func Plugin(ctx context.Context) *plugin.Plugin {
 		},
 		DefaultTransform: transform.FromJSONTag(),
 		TableMap: map[string]*plugin.Table{
-			"skills": skillsTable(),
+			"skills":                         skillsTable(),
+			"skills_tutorials":               skillsTutorialsTable(),
+			"skills_learning_more_tutorials": skillsLearningMoreTutorialsTable(),
 		},
 	}
 }

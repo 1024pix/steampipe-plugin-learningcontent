@@ -3,7 +3,6 @@ module github.com/1024pix/steampipe-plugin-learning-content
 go 1.17
 
 require (
-	github.com/1024pix/go-learning-content-client v0.0.0-00010101000000-000000000000
 	github.com/acarl005/stripansi v0.0.0-20180116102854-5a71ef0e047d // indirect
 	github.com/agext/levenshtein v1.2.1 // indirect
 	github.com/apparentlymart/go-textseg/v13 v13.0.0 // indirect
@@ -17,6 +16,7 @@ require (
 	github.com/golang/glog v1.0.0 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/hashicorp/go-hclog v0.15.0 // indirect
+	github.com/hashicorp/go-multierror v1.1.1 // indirect
 	github.com/hashicorp/go-plugin v1.4.1 // indirect
 	github.com/hashicorp/go-version v1.3.0 // indirect
 	github.com/hashicorp/hcl/v2 v2.9.1 // indirect
@@ -47,9 +47,6 @@ require (
 
 require (
 	github.com/hashicorp/errwrap v1.1.0 // indirect
-	github.com/hashicorp/go-multierror v1.1.1 // indirect
-	github.com/imroc/req/v3 v3.9.3 // indirect
+	github.com/imroc/req/v3 v3.9.3
 	github.com/turbot/steampipe-plugin-sdk/v2 v2.1.1
 )
-
-replace github.com/1024pix/go-learning-content-client => ../go-learning-content-client
