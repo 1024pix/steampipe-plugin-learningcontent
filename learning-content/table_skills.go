@@ -20,8 +20,6 @@ func skillsTable() *plugin.Table {
 			{Name: "hintFrFr", Type: proto.ColumnType_STRING},
 			{Name: "hintEnUs", Type: proto.ColumnType_STRING},
 			{Name: "hintStatus", Type: proto.ColumnType_STRING},
-			// FIXME tutorialIds
-			// FIXME learningMoreTutorialIds
 			{Name: "pixValue", Type: proto.ColumnType_INT},
 			{Name: "competenceId", Type: proto.ColumnType_STRING},
 			{Name: "status", Type: proto.ColumnType_STRING},
