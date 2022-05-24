@@ -1,8 +1,9 @@
 package learning_content
 
 import (
-	client "github.com/1024pix/steampipe-plugin-learning-content/learning-content/client"
 	"github.com/turbot/steampipe-plugin-sdk/v2/plugin"
+
+	client "github.com/1024pix/steampipe-plugin-learning-content/learning-content/client"
 )
 
 func GetLatestRelease(d *plugin.QueryData) (*client.Release, error) {

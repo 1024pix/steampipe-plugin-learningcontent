@@ -7,11 +7,11 @@ import (
 	"github.com/turbot/steampipe-plugin-sdk/v2/plugin"
 )
 
-func tubeTable() *plugin.Table {
+func tubesTable() *plugin.Table {
 	return &plugin.Table{
-		Name: "tube",
+		Name: "tubes",
 		List: &plugin.ListConfig{
-			Hydrate: hydrateTubeList,
+			Hydrate: hydrateTubesList,
 		},
 		Columns: []*plugin.Column{
 			{Name: "id", Type: proto.ColumnType_STRING},
@@ -27,10 +27,10 @@ func tubeTable() *plugin.Table {
 	}
 }
 
-func hydrateTubeList(ctx context.Context, d *plugin.QueryData, h *plugin.HydrateData) (interface{}, error) {
+func hydrateTubesList(ctx context.Context, d *plugin.QueryData, h *plugin.HydrateData) (interface{}, error) {
 	logger := plugin.Logger(ctx)
 
-	logger.Debug("hydrating tube list")
+	logger.Debug("hydrating tubes list")
 
 	r, err := GetLatestRelease(d)
 	if err != nil {

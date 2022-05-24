@@ -16,12 +16,19 @@ func Plugin(ctx context.Context) *plugin.Plugin {
 		},
 		DefaultTransform: transform.FromJSONTag(),
 		TableMap: map[string]*plugin.Table{
-			"challenge":                      challengeTable(),
+			"areas":                          areasTable(),
+			"challenges":                     challengesTable(),
+			"competences":                    competencesTable(),
+			"courses":                        coursesTable(),
+			"courses_challenges":             coursesChallengesTable(),
+			"courses_competences":            coursesCompetencesTable(),
+			"frameworks":                     frameworksTable(),
 			"skills":                         skillsTable(),
 			"skills_tutorials":               skillsTutorialsTable(),
 			"skills_learning_more_tutorials": skillsLearningMoreTutorialsTable(),
+			"thematics":                      thematicsTable(),
+			"tubes":                          tubesTable(),
 			"tutorials":                      tutorialsTable(),
-			"tube":                           tubeTable(),
 		},
 	}
 }

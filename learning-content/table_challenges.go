@@ -7,11 +7,11 @@ import (
 	"github.com/turbot/steampipe-plugin-sdk/v2/plugin"
 )
 
-func challengeTable() *plugin.Table {
+func challengesTable() *plugin.Table {
 	return &plugin.Table{
 		Name: "challenges",
 		List: &plugin.ListConfig{
-			Hydrate: hydrateChallengeList,
+			Hydrate: hydrateChallengesList,
 		},
 		Columns: []*plugin.Column{
 			{Name: "id", Type: proto.ColumnType_STRING},
@@ -44,7 +44,7 @@ func challengeTable() *plugin.Table {
 	}
 }
 
-func hydrateChallengeList(ctx context.Context, d *plugin.QueryData, h *plugin.HydrateData) (interface{}, error) {
+func hydrateChallengesList(ctx context.Context, d *plugin.QueryData, h *plugin.HydrateData) (interface{}, error) {
 	logger := plugin.Logger(ctx)
 
 	logger.Debug("hydrating challenges list")
