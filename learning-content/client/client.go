@@ -42,7 +42,10 @@ func (c *Client) GetLatestRelease() (*Release, error) {
 
 	var r = new(Release)
 
-	res.UnmarshalJson(r)
+	err = res.UnmarshalJson(r)
+	if err != nil {
+                return nil, fmt.Errorf("error unmarshalling JSON: %q", err)
+        }
 
 	return r, nil
 }
