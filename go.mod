@@ -2,7 +2,7 @@ module github.com/1024pix/steampipe-plugin-learning-content
 
 go 1.19
 
-require github.com/turbot/steampipe-plugin-sdk/v4 v4.1.7
+require github.com/turbot/steampipe-plugin-sdk/v4 v4.1.13
 
 require (
 	github.com/XiaoMi/pegasus-go-client v0.0.0-20210427083443-f3b6b08bc4c2 // indirect
